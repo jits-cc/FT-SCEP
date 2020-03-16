@@ -101,7 +101,7 @@ lps = []
 
 for i in titledb:
     if i["id"].endswith("000"):
-        if i["publisher"] == "Nintendo":
+        if i.get("publisher") == "Nintendo":
             first_base.append(i)
         else:
             regular_base.append(i)
