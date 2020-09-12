@@ -9,7 +9,7 @@ from Crypto.Cipher import AES
 from os.path import exists
 from random import randint
 from zlib import compress
-from re import search
+from re import search, match
 from json import load
 
 
@@ -90,6 +90,10 @@ def find_title_id(name):
     if tid is not None:
         return tid.group(0).upper()
     return
+
+
+def valid_file_id(file_id):
+    return match(r"[-\w]{25,}$",file_id)
 
 
 def lsf(service, parent):
