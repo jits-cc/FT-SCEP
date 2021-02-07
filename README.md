@@ -65,7 +65,7 @@ The shop configuration name. The name is for presentation purpose only while the
 ##### Includes Value
 An Includes Value is a 4 digit long value that let's the tool know what you want to include in the shop.
 
-The first value represents langauge packs. `0` to not include them. `1` to include them.
+The first value represents language packs. `0` to not include them. `1` to include them.
 The second, third, and fourth value represent base, updates, and DLC titles, respectively. `0` to not include them, `1` to only include first party, `2` to only included non-first party. `3` to include everything.
 
 `1310`, for example, will tell the tool to include language packs, all base titles, updates for first party only, and to leave out all the DLC.
