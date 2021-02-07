@@ -235,7 +235,7 @@ for i in range(len(config["shop_configurations"])):
         with open(shop_config["tinfoil_path"], "wb+") as f:
             f.write(shop_tinfoil)
 
-    if "file_id" in shop_config or args.c is not None:
+    if "file_id" in shop_config and valid_file_id(shop_config["file_id"]) or args.c is not None:
         mimetype = "application/json"
         if shop_tinfoil:
             mimetype = "application/tinfoil"
