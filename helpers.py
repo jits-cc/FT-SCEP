@@ -77,10 +77,10 @@ def get_creds(credentials, token, scopes=["https://www.googleapis.com/auth/drive
                 credentials, scopes
             ).run_local_server(port=0)
         with open(token, "w") as t:
-            json_creds = creds.to_json()
             # https://github.com/googleapis/google-auth-library-python/issues/666
             # Avoids issues when loading the token again. 
-            del json_creds["expiry"]
+            creds.expiry = None
+            json_creds = creds.to_json()
             t.write(json_creds)
     return creds
 
