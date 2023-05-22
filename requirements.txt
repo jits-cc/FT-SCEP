@@ -1,4 +1,4 @@
-requests==2.23.0
+requests==2.31.0
 google_auth_oauthlib==0.4.1
 google_api_python_client==1.7.12
 protobuf==3.11.3
